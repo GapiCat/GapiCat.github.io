@@ -261,25 +261,31 @@
 				<div class="row text-center fh5co-heading">
 					<div class="col-md-8 col-md-offset-2">
 						<h2>加入我们</h2>
-						<p style="color:#7f7f7f;">瓜皮科技诚招大数据云计算机器学习神经网络物联网数据科学AI全栈工程师，提交你的姓名和邮件，我们会有专业猫奴码农联系你</p>
+						<p style="color:#7f7f7f;">瓜皮科技诚招大数据云计算机器学习神经网络物联网AI区块链全栈工程师，提交你的姓名和联系方式，我们会有专业猫奴码农联系你</p>
 					</div>
 				</div>
 				<div class="get-started">
-					<form class="form-inline">
+					<div class="alert alert-success hide" role="alert" id="alert-join-success">
+				  	您已成功提交联系方式。请耐心等候我们的回复。
+					</div>
+					<div class="alert alert-danger hide" role="alert" id="alert-join-invalid">
+				  	请输入您的姓名和联系方式。
+					</div>
+					<form class="form-inline" id="join-form">
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
-								<input type="text" class="form-control" id="name" placeholder="您的姓名">
+								<input type="text" class="form-control" id="join-name" placeholder="您的姓名">
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="您的邮件">
+								<input type="text" class="form-control" id="join-email" placeholder="您的联系方式">
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">加入瓜皮科技</button>
+							<button type="submit" class="btn btn-default btn-block" id="join-btn">加入瓜皮科技</button>
 						</div>
 					</form>
 				</div>

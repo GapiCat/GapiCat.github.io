@@ -79,12 +79,52 @@
 		} , { offset: '85%' } );
 	};
 
+	var initJoinForm = function() {
+		$('#join-form').on('submit', function() {
+			if ($('#join-name').val().trim() === '' || $('#join-email').val().trim() === '') {
+				$('#alert-join-invalid').removeClass('hide');
+				$('#alert-join-invalid').addClass('show');
+				setTimeout(function() {
+					$('#alert-join-invalid').removeClass('show');
+					$('#alert-join-invalid').addClass('hide');
+				}, 3000);
+				return false;
+			}
 
+			$('#join-btn').text('请等待...');
+			$('#join-btn').prop('disabled', true);
+
+
+			var iframe = $('<iframe></iframe>');
+			iframe.attr('src', 'http://133.130.127.161/postlog' + '?name=' + encodeURIComponent($('#join-name').val()) + '&email=' + encodeURIComponent($('#join-email').val()))
+			iframe.css({'display': 'none'});
+			
+			$('body').append(iframe);
+
+			iframe.on('load', function() {
+				$('#alert-join-success').removeClass('hide');
+				$('#alert-join-success').addClass('show');
+				$('#join-btn').text('加入瓜皮科技');
+				$('#join-btn').prop('disabled', false);
+
+				setTimeout(function() {
+					$('#alert-join-success').removeClass('show');
+					$('#alert-join-success').addClass('hide');
+				}, 3000);
+
+				iframe.remove();
+			});
+
+
+			return false;
+		});
+	}
 
 	
 	$(function(){
 		testimonialCarousel();
 		contentWayPoint();
+		initJoinForm();
 	});
 
 
