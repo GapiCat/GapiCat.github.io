@@ -87,7 +87,7 @@
 				setTimeout(function() {
 					$('#alert-join-invalid').removeClass('show');
 					$('#alert-join-invalid').addClass('hide');
-				}, 3000);
+				}, 5000);
 				return false;
 			}
 
@@ -110,7 +110,7 @@
 				setTimeout(function() {
 					$('#alert-join-success').removeClass('show');
 					$('#alert-join-success').addClass('hide');
-				}, 3000);
+				}, 10000);
 
 				iframe.remove();
 			});
