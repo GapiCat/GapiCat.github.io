@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>瓜皮撸猫 &mdash; 随时随地有猫撸</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="瓜皮撸猫" />
+  <meta name="keywords" content="瓜皮, 猫, 撸猫" />
+  <meta name="author" content="瓜皮科技" />
+
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'> -->
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="css/icomoon.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Theme style  -->
+
+  <style>
+    svg path,
+    svg rect{
+      fill: #FF6700;
+    }
+
+    .loader {
+      width: 300px;
+      height: 100px;
+      position: absolute;
+      left: calc(50% - 150px);
+      top: calc(50% - 100px);
+      text-align: center;
+    }
+  </style>
+
+  </head>
+  <body>
+    <div class="loader" title="0">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="100px" height="100px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve" style="">
+      <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+        s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+        c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+      <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+        C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 20 20"
+          to="360 20 20"
+          dur="0.5s"
+          repeatCount="indefinite"/>
+        </path>
+      </svg>
+      <div id="hint-box" style="font-size: 20px;display: none;">你还真以为有这么个APP？</div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('#loader-1').fadeOut(function() {
+            $('#hint-box').fadeIn();
+          });
+        }, 1500);
+      });
+    </script>
+
+  </body>
+
+</html>
