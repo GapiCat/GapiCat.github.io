@@ -96,7 +96,7 @@
 
 
 			var iframe = $('<iframe></iframe>');
-			iframe.attr('src', 'http://133.130.127.161/postlog' + '?name=' + encodeURIComponent($('#join-name').val()) + '&email=' + encodeURIComponent($('#join-email').val()))
+			iframe.attr('src', 'https://jpweb.chionlab.moe/postlog' + '?name=' + encodeURIComponent($('#join-name').val()) + '&email=' + encodeURIComponent($('#join-email').val()))
 			iframe.css({'display': 'none'});
 			
 			$('body').append(iframe);
